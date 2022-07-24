@@ -8,6 +8,7 @@ namespace Category.Configuration
     {
         public static void RegisterServices(this IServiceCollection services)
         {
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<CategoryContext>();
         }

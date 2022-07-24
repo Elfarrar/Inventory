@@ -8,6 +8,7 @@ namespace Template.Configuration
     {
         public static void RegisterServices(this IServiceCollection services)
         {
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ITemplateRepository, TemplateRepository>();
             services.AddScoped<TemplateContext>();
         }

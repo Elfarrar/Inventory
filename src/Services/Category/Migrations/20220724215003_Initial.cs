@@ -28,7 +28,7 @@ namespace Category.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Type = table.Column<int>(type: "int", nullable: false),
-                    CreateUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreateUser = table.Column<string>(type: "varchar(200)", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     SerializedData = table.Column<string>(type: "varchar(200)", nullable: false),
                     CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)

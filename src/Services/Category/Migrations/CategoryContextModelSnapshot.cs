@@ -53,8 +53,9 @@ namespace Category.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CreateUser")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("CreateUser")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("SerializedData")
                         .IsRequired()

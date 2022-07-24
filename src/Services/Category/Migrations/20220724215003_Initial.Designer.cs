@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Category.Migrations
 {
     [DbContext(typeof(CategoryContext))]
-    [Migration("20220724190927_Initial")]
+    [Migration("20220724215003_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,8 +55,9 @@ namespace Category.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CreateUser")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("CreateUser")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("SerializedData")
                         .IsRequired()

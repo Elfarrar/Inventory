@@ -1,8 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Enums;
 using Repository.Context;
 using System.Linq.Expressions;
+using System.Net.Http;
+using System.Security.Claims;
 
 namespace Repository
 {
@@ -11,12 +14,13 @@ namespace Repository
         protected readonly ApplicationContext Db;
         protected readonly DbSet<T> DbSet;
         protected readonly DbSet<Audit> DbSetAudit;
-
-        public Repository(ApplicationContext db)
+        private readonly string _id;
+        public Repository(ApplicationContext db, IHttpContextAccessor userContext)
         {
             Db = db;
             DbSet = Db.Set<T>();
             DbSetAudit = Db.Set<Audit>();
+            _id = userContext.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         }
         public virtual async Task<IEnumerable<T>> Get(bool track = true)
         {
@@ -82,7 +86,7 @@ namespace Repository
             return new Audit()
             {
                 CreateDate = DateTime.Now,
-                CreateUser = Guid.NewGuid(),
+                CreateUser = _id,
                 Type = type,
                 SerializedData = entity.SerializedObject,
             };
