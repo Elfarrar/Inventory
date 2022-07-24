@@ -1,5 +1,5 @@
-﻿using Base.Configuration.Identity;
-using Base.Configuration;
+﻿using BaseAPI.Configuration.Identity;
+using BaseAPI.Configuration;
 using Identity.Configuration;
 
 namespace Identity

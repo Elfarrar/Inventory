@@ -1,4 +1,4 @@
-﻿using Base.Configuration.Models;
+﻿using BaseAPI.Configuration.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace Base.Configuration.Identity
+namespace BaseAPI.Configuration.Identity
 {
     public static class JwtConfig
     {

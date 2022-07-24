@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BaseAPI.Configuration.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Model;
 using Repository;
 using System.Text.Json;
 
-namespace Base.Controllers
+namespace BaseAPI.Controllers
 {
     [ApiController]
     public abstract class BaseController<T> : MainController where T : Entity
@@ -14,6 +16,7 @@ namespace Base.Controllers
             _db = db;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public virtual async Task<ActionResult> Index()
         {
@@ -22,6 +25,7 @@ namespace Base.Controllers
         }
 
         [Route("details/{id}")]
+        [ClaimsAuthorize("CRUD", "Read")]
         [HttpGet]
         public virtual async Task<ActionResult> Details(Guid id)
         {
@@ -31,6 +35,7 @@ namespace Base.Controllers
 
 
         [Route("create")]
+        [ClaimsAuthorize("CRUD", "Create")]
         [HttpPost]
         public virtual async Task<ActionResult> Create(T data)
         {
@@ -44,6 +49,7 @@ namespace Base.Controllers
         }
 
         [Route("update")]
+        [ClaimsAuthorize("CRUD", "Update")]
         [HttpPut]
         public virtual async Task<ActionResult> Update(T data)
         {
@@ -57,6 +63,7 @@ namespace Base.Controllers
         }
 
         [Route("delete/{id}")]
+        [ClaimsAuthorize("CRUD", "Delete")]
         [HttpDelete]
         public virtual async Task<ActionResult> Delete(Guid id)
         {

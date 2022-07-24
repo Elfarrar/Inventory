@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Base.Controllers
+namespace BaseAPI.Controllers
 {
     [ApiController]
     public abstract class MainController : Controller

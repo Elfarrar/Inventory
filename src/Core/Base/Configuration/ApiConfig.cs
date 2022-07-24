@@ -1,11 +1,11 @@
-﻿using Base.Configuration.Identity;
+﻿using BaseAPI.Configuration.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Base.Configuration
+namespace BaseAPI.Configuration
 {
     public static class ApiConfig
     {

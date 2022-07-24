@@ -1,4 +1,4 @@
-﻿namespace Base.Configuration.Models
+﻿namespace BaseAPI.Configuration.Models
 {
     public class SwaggerSettings
     {

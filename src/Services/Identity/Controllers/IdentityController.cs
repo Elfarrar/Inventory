@@ -1,5 +1,5 @@
-﻿using Base.Configuration.Models;
-using Base.Controllers;
+﻿using BaseAPI.Configuration.Models;
+using BaseAPI.Controllers;
 using Identity.Helpers;
 using Identity.Models;
 using Microsoft.AspNetCore.Identity;

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Base.Configuration.Identity
+namespace BaseAPI.Configuration.Identity
 {
     public class CustomAuthorization
     {

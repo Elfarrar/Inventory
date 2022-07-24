@@ -1,10 +1,10 @@
-﻿using Base.Configuration.Models;
+﻿using BaseAPI.Configuration.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace Base.Configuration
+namespace BaseAPI.Configuration
 {
     public static class SwaggerConfig
     {

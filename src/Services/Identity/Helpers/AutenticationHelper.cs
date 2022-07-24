@@ -1,4 +1,4 @@
-﻿using Base.Configuration.Models;
+﻿using BaseAPI.Configuration.Models;
 using Identity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using System.Security.Claims;
 
 
-namespace Base.Configuration.Identity
+namespace BaseAPI.Configuration.Identity
 {
     public class ClaimFilter : IAuthorizationFilter
     {
