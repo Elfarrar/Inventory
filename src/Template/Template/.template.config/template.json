@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Rafael Veneroso Morici",
+  "classifications": [ "API" ],
+  "name": "Service Template",
+  "defaultName": "API Template",
+  "identity": "Web API Template",
+  "shortName": "apitemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Template",
+  "preferNameDirectory": true
+}

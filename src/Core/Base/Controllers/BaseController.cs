@@ -11,6 +11,7 @@ namespace BaseAPI.Controllers
     public abstract class BaseController<T> : MainController where T : Entity
     {
         private readonly IRepository<T> _db;
+        
         public BaseController(IRepository<T> db)
         {
             _db = db;
